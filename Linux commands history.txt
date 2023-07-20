@@ -1,0 +1,313 @@
+    1  cat  /etc/selinux/config 
+    2  cat   /proc/cpuinfo 
+    3  lscpu 
+    4  cat   /proc/meminfo 
+    5  free 
+    6  free -m
+    7  free -g
+    8  free -h
+    9  history 
+   10  cat   /proc/cpuinfo 
+   11  history 
+   12  clear
+   13  history 
+   14  history \
+   15  history 
+   16  ifconfig
+   17  find   /etc   -name   *-ens33
+   18  updatedb 
+   19  locate ifcfg-ens33
+   20  find   /etc   -name   ifcfg*
+   21  find   /   -name   ifcfg*
+   22  df  -h
+   23  df  
+   24  df  -hT
+   25  lsblk
+   26  du -sh /
+   27  du -sh /run
+   28  du -sh /usr
+   29  history 
+   30  cd /bin/
+   31  ls
+   32  cd -
+   33  cd /bin/
+   34  ls | wc -l
+   35  cd 
+   36  ls /sbin/ | wc -l
+   37  pwd
+   38  cd ..
+   39  pwd
+   40  cd ..
+   41  pwd
+   42  cd ..
+   43  pwd
+   44  ls
+   45  runlevel 
+   46  systemctl get-default 
+   47  init 3
+   48  runlevel
+   49  systemctl get-default 
+   50  init 5
+   51  cd /
+   52  ls
+   53  date
+   54  cd
+   55  pwd
+   56  ls
+   57  mkdir  demo
+   58  cd demo/
+   59  ls
+   60  touch  test.txt   nfs.txt
+   61  ls
+   62  touch  t{1..1000}.txt
+   63  ls | wc -l
+   64  touch  read{1..5}.pdf
+   65  ls | wc -l
+   66  ls
+   67  touch music.mp3 video.mp4
+   68  ls music.mp3 
+   69  ls music.mp3  video.mp4 
+   70  ls | wc -l
+   71  rm   t?.txt
+   72  rm -f  t?.txt
+   73  ls | wc -l
+   74  rm -f t{1..15}.txt
+   75  ls | wc -l
+   76  ks
+   77  ls
+   78  pwd
+   79  ls | wc -l
+   80  rm -f t???.txt
+   81  ls | wc -l
+   82  ls
+   83  rm  -f  t*.txt
+   84  ls
+   85  systemctl  stop firewalld
+   86  systemctl  disable firewalld
+   87  vim  /etc/selinux/config 
+   88  getenforce 
+   89  ls
+   90  rm -f *.pdf
+   91  ls
+   92  rm -f *
+   93  ls
+   94  cd /
+   95  cd -
+   96  man  rm
+   97  pinfo  rm
+   98  man getenforce
+   99  history 
+  100  ls
+  101  mkdir   d1/d2/d3/d4
+  102  mkdir  -p   d1/d2/d3/d4
+  103  l
+  104  ls
+  105  ls -R  d1
+  106  history 
+  107  cd
+  108  ls -al
+  109  ls -l anaconda-ks.cfg 
+  110  touch  anaconda-ks.cfg 
+  111  ls -l anaconda-ks.cfg 
+  112  echo "Hello LTI"
+  113  cat  >   catFIle.txt
+  114  cat   catFIle.txt 
+  115  cat  >   catFIle.txt
+  116  cat   catFIle.txt 
+  117  touch  catFIle
+  118  ll
+  119  ls -l
+  120  ll
+  121  cat   catFIle.txt 
+  122  cat  >>   catFIle.txt 
+  123  cat   catFIle.txt 
+  124  cat   catFIle.txt | head -1 > catFIle.txt 
+  125  cat   catFIle.txt 
+  126  cat   > catFIle.txt 
+  127  cat   catFIle.txt 
+  128  cat   catFIle.txt | head -1
+  129  cat   catFIle.txt | head -1 >> catFIle.txt 
+  130  cat   catFIle.txt 
+  131  cat   catFIle.txt | head -1 > catFIle.txt 
+  132  cat   catFIle.txt 
+  133  ls
+  134  cat catFIle.txt 
+  135  cat catFIle
+  136  cat > catFIle
+  137  cat catFIle
+  138  cat > catFIle
+  139  cat catFIle
+  140  set -o noclobber 
+  141  cat catFIle
+  142  cat > catFIle
+  143  man set
+  144  cat > catFIle
+  145  cat >> catFIle
+  146  cat catFIle
+  147  which set
+  148  which useradd
+  149  gedit   geditFile.txt
+  150  date
+  151  cal
+  152  gedit   geditFile.txt &
+  153  date
+  154  kill -l
+  155  kill -9 70694
+  156  top
+  157  gedit   geditFile.txt &
+  158  kill gedit
+  159  pidof  gedit
+  160  kill -9 71526
+  161  pidof  gedit
+  162  nano  nanoFIle.txt
+  163  cat nanoFIle.txt 
+  164  vi  viFile.txt
+  165  cat  viFile.txt
+  166  vi  viFile.txt
+  167  cat  viFile.txt
+  168  vi /etc/passwd
+  169  vim /etc/passwd
+  170  history 
+  171  ls
+  172  mv   nanoFIle.txt   newnano.txt
+  173  ls
+  174  cat newnano.txt 
+  175  pstree
+  176  top
+  177  pidof  systemd
+  178  ls
+  179  pwd
+  180  cat viFile.txt 
+  181  cd /tmp
+  182  cat viFile.txt 
+  183  cd -
+  184  cat  /root/viFile.txt   
+  185  cd /tmp
+  186  cat  /root/viFile.txt   
+  187  cd /root/demo/
+  188  ls
+  189  touch t1 t2
+  190  cd ..
+  191  ls
+  192  cd -
+  193  ls
+  194  cp   /root/demo/t1    /root/
+  195  ls /root/
+  196  cp t2  ../
+  197  ls /root/
+  198  ls
+  199  cp -r  d1  ../
+  200  ls ../
+  201  ls ../../
+  202  ls /
+  203  history 
+  204  cd
+  205  mkdir  test
+  206  touch  test
+  207  ls
+  208  ll
+  209  ls -a
+  210  ls
+  211  mv   newnano.txt    .newnano.txt 
+  212  ls
+  213  ls -a
+  214  mv .newnano.txt   newnano.txt 
+  215  ls
+  216   ls -a | grep -e '$.'
+  217   ls -a | grep  -e $.
+  218   ls -a | grep  -e {$.}
+  219   ls -a | egrep   {$.}
+  220   ls -a | egrep '$.'
+  221   ls -a | grep .*
+  222   ls -a
+  223   ls -a | grep $.
+  224   ls -a | grep ^.
+  225  ifconfig
+  226  ifconfig | grep  inet
+  227  ifconfig | grep  inet | head -n 1
+  228  ifconfig | grep  inet | head -1
+  229  ls
+  230  ls demo/
+  231  cat catFIle
+  232  cat catFIle.txt 
+  233  cat catFIle
+  234  cat catFIle | grep joker
+  235  cat  /etc/services 
+  236  cat  /etc/services  | wc -l
+  237  cat  /etc/services  | grep tcp  | wc -l
+  238  cat  /etc/services  | grep udp  | wc -l
+  239  cat  /etc/services  | grep udp  | wc - l
+  240  cat  /etc/services  | grep udp  | wc
+  241  cat  /etc/services  | grep udp  | wc -l
+  242  cat  /etc/services  | grep udp  | wc -c
+  243  cat  /etc/services  | w
+  244  w
+  245  cat  /etc/services  | wc
+  246  vim /etc/services 
+  247  cat /etc/services  | grep -e {tcp|udp} | wc -l
+  248  cat /etc/services  | grep -e 'tcp|udp' | wc -l
+  249  cat /etc/services  | grep -e [tcp|udp] | wc -l
+  250  cat /etc/services  | grep  [tcp|udp] | wc -l
+  251  cat /etc/services  | grep  [tcp,udp] | wc -l
+  252  cat /etc/services  | grep  tcp | wc -l
+  253  cat /etc/services  | grep  udp | wc -l
+  254  netstat -tulpn 
+  255  netstat -tulpn | grep tcp
+  256  netstat -tulpn | grep tcp  | wc -l
+  257  netstat -tulpn | grep udp  | wc -l
+  258  netstat -tulpn | grep ssh
+  259  ls
+  260  cd demo/
+  261  ls
+  262  rm -rf *
+  263  ls
+  264  mkdir test; touch test
+  265  ls
+  266  ll
+  267  mkdir -p test; touch test1
+  268  ll
+  269  rm -rf *
+  270  mkdir  d1; touch t1
+  271  ll
+  272  ll  d1
+  273  ll  t1
+  274  ll /boot/
+  275  ll
+  276  umask 
+  277  ll
+  278  umask 044
+  279  umask 
+  280  mkdir afterd1; touch aftert1
+  281  ll
+  282  umask 022
+  283  umask
+  284  ll
+  285  ll  aftert1 
+  286  chmod   664    aftert1 
+  287  ll  aftert1 
+  288  chmod   600    aftert1 
+  289  ll  aftert1 
+  290  chmod   006    aftert1 
+  291  ll  aftert1 
+  292  ll
+  293  ll  aftert1 
+  294  chmod   000    aftert1 
+  295  ll  aftert1 
+  296  # owner=rwx, g=rw, o=r
+  297  chmod  764   aftert1 
+  298  ll  aftert1 
+  299  chmod   000    aftert1 
+  300  ll  aftert1 
+  301  # owner=rwx, g=rw, o=r
+  302  chmod  u=rwx,g+rw,o+r   aftert1 
+  303  ll  aftert1 
+  304  chmod o+x  aftert1 
+  305  ll  aftert1 
+  306  chmod   g-w   aftert1 
+  307  ll  aftert1 
+  308  chmod   g=w   aftert1 
+  309  ll  aftert1 
+  310  chmod   g+r   aftert1 
+  311  ll  aftert1 
+  312  history 
+  313  history > /root/Desktop/hist.txt
