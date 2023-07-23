@@ -1,0 +1,168 @@
+  313  history > /root/Desktop/hist.txt
+  314  cd
+  315  useradd  alpha
+  316  cat /etc/passwd | grep alpha
+  317  cat /etc/shadow | grep alpha
+  318  ls /home/
+  319  ls /var/mail/
+  320  cat /etc/group | grep alpha
+  321  cat /etc/gshadow | grep alpha
+  322  vim   /etc/passwd
+  323  getent group wheel
+  324  vim   /etc/passwd
+  325  cat   /etc/passwd  | grep alpha
+  326  useradd  -s /bin/sh -u 5000 -c "Ittilian Stallion"   rocky
+  327  cat   /etc/passwd  | grep rocky
+  328  who
+  329  jeetu
+  330  ls -l  /bin/bash
+  331  ls -lh  /bin/bash
+  332  vim /bin/bash
+  333  history | grep rocky
+  334  yes
+  335  man useradd
+  336  cat  /etc/shells 
+  337  su - jeetu
+  338  chage -l jeetu 
+  339  mail  alpha@svr1.alpha.corp
+  340  su  -   alpha
+  341  pwd
+  342  su     alpha
+  343  cd /home/
+  344  ll
+  345  su  -   alpha
+  346  su - usr1
+  347  su - usr3
+  348  su - ironman
+  349  vim /etc/shadow
+  350  whoami
+  351  passwd
+  352  passwd jeetu
+  353  vim /etc/shadow
+  354  chage   -l   jeetu
+  355  chage    jeetu
+  356  cat /etc/shadow | grep jeetu
+  357  ls /home/
+  358  ls /var/mail
+  359  cat /var/mail/alpha 
+  360  groupadd   avengers
+  361  cat /etc/passwd | grep alpha
+  362  cat /etc/group | grep alpha
+  363  cat /etc/passwd | grep avengers
+  364  cat /etc/group | grep avengers
+  365  cat /etc/passwd | grep rocky
+  366  hostname
+  367  history 
+  368  cat /etc/group | grep avengers
+  369  getent group avengers
+  370  useradd ironman
+  371  cat /etc/group | grep avengers
+  372  useradd -G avengers hulk
+  373  cat /etc/group | grep avengers
+  374  usermod  -G avengers ironman
+  375  cat /etc/group | grep avengers
+  376  ll
+  377  cd demo/
+  378  ls
+  379  rm -rf *
+  380  mkdir d1; touch t1
+  381  ll
+  382  touch t2
+  383  ll
+  384  chown   alpha  d1
+  385  ll
+  386  chgrp  avengers  t1
+  387  ll
+  388  chown   alpha:avengers   t2
+  389  ll
+  390  chown   :avengers   d1
+  391  ll
+  392  history 
+  393  cd
+  394  cat > /data.txt
+  395  ll /data.txt 
+  396  groupadd ltib11
+  397  useradd -G ltib11  usr1
+  398  useradd -G ltib11  usr2
+  399  useradd usr3
+  400  cat /etc/group | grep ltib11
+  401  chgrp  ltib11   /data.txt 
+  402  ll /data.txt 
+  403  chmod   g+w,o-r   /data.txt 
+  404  ll /data.txt 
+  405  getfacl /data.txt 
+  406  ll /data.txt 
+  407  getfacl /data.txt 
+  408  ll /data.txt 
+  409  setfacl     -m    g:avengers:r--   /data.txt
+  410  ll /data.txt 
+  411  getfacl /data.txt 
+  412  setfacl     -m    u:alpha:rw-   /data.txt
+  413  which passwd
+  414  ls -l /usr/bin/passwd
+  415  df -h
+  416  df -hT
+  417  lsblk
+  418  man lvcreate
+  419  lsblk
+  420  fdisk   /dev/sdb
+  421  lsblk
+  422  fdisk   /dev/sdc
+  423  lsblk
+  424  fdisk   /dev/sdd
+  425  lsblk
+  426  history 
+  427  lsblk
+  428  pvcreate  /dev/sdb1  /dev/sdc1  /dev/sdd1
+  429  pvs
+  430  pvdisplay 
+  431  pvs
+  432  vgcreate  vg  /dev/sdb1  /dev/sdc1  /dev/sdd1
+  433  vgs
+  434  vgdisplay 
+  435  lvcreate   -n  lv  -l  100%  vg
+  436  lvcreate   -n  lv  --extents  100%  vg
+  437  lvcreate   -n  lv  -l  3837  vg
+  438  lvs
+  439  vgs
+  440  lvdisplay 
+  441  mkdir   /lvm
+  442  mkfs.xfs   /dev/vg/lv
+  443  df -h
+  444  mount   /dev/vg/lv    /lvm
+  445  df -h
+  446  umount  /lvm
+  447  df -h
+  448  cp   /etc/fstab   /etc/fstab-backup
+  449  vim  /etc/fstab  
+  450  tail -1 /etc/fstab  
+  451  vim  /etc/fstab  
+  452  mount -a
+  453  mount | grep /lvm
+  454  df -h
+  455  init 6
+  456  mail
+  457  su - alpha
+  458  passwd tony
+  459  su - tony
+  460  su - ironman
+  461  ls
+  462  ping google.com
+  463  exit
+  464  script day4.txt
+  465  ;s
+  466  ls
+  467  cat day4.txt 
+  468  rpm -q finger
+  469  yum remove finger
+  470  yum remove finger -y
+  471  rpm -q finger
+  472  yum info finger
+  473  yum install  finger
+  474  yum install  finger -y
+  475  yum info finger
+  476  history 
+  477  yum update
+  478  rpm -qav --last
+  479  rpm -qav --last | grep kernel
+  480  history > /root/Desktop/day4-5.txt
