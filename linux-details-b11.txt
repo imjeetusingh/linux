@@ -1,0 +1,130 @@
+file mgmt
+	create
+		- touch
+			- it creates blank files
+			- update the time stamp of a file.
+		- cat
+			- creates, view, append, overwrite, merge data of files in a single file.
+		- nano, vi/vim/, gedit
+	modify, delete, copy, remove, move, hide/unhide
+directory mgmt
+	create, modify, delete, copy, remove, move, hide/unhide
+permissions
+	regular permissions, acls, special permissions.
+	
+	chmod 
+		1. numerical method 	==> numbers
+			# chmod  <number>  <file/directory>
+			
+		2. symbolical method	==> alphabets
+			# chmod  <u/g/o/a><+-=><rwx>  <file/directory>
+	
+	
+	
+	
+user mgmt
+	create, modify, delete, sudo users
+package mgmt
+	rpm, yum, apt-get/apt
+storage mgmt
+	LVM
+	
+	
+Package mgmt
+-----------
+- installing, updating, querying & removing of package(softwares) on a linux machine.
+- types:
+	- RPM			(centos/redhat) -> 4,5,6,7,8
+	- YUM			(centos/redhat) -> 4,5,6,7,8
+	- DNF			(centos/redhat) -> 8+
+	- APT-GET / APT	(Ubuntu)
+	- DEB			(BackTrack/Kali)
+	- DPKG			(BackTrack/Kali)
+	
+Name of the package:
+	name-version-release-architecture.rpm
+	name-version-release-architecture.deb
+	name-version-release-architecture.dpkg
+		architecture:
+			1. 32bit (i686)
+			2. 64bit (x86_64)
+			3. noarch
+			
+How to install a pkg?
+	online
+		Paid: subscription (Redhat sattelite server)
+		Free: mirror servers
+	offline
+		download 
+		DVD
+		
+RPM:
+	- redhat package manager
+	- default pkg manager in RHEL/CentOS
+
+YUM:
+	- Yellowdog update manager / Yellowdog updater/Modifier
+- install
+	# yum install <package-name>
+- update
+	# yum update <package-name>
+- query
+	# yum info <package-name>
+- remove
+	# yum remove <package-name>
+	
+	
+# yum groupinstall -y "Server with GUI"
+# systemctl set-default graphical.target
+# init 6
+
+
+GUI -->  CLI (permanently)
+# systemctl set-default multi-user.target
+# init 6
+
+
+Services in CentOS 7
+---------------------
+# systemctl  <action>  <service-name>
+		d = daemon processes (background services)
+	actions
+		- start
+		- restart
+		- stop
+		- enable
+		- disable
+		- is-active
+		- status
+	service-name
+		- firewalld
+		- sshd
+		- network
+		- httpd
+		- vsftpd
+		
+NFS COnfig:
+--------------
+install package (on server & client)
+	# yum install -y nfs-utils rpcbind
+	
+add firewall rules (on server & client)
+	# firewall-cmd  --add-service=nfs  --permanent
+	# firewall-cmd  --reload
+	
+edit the config file:
+	# vim   /etc/exports
+	
+services:
+	# systemctl enable nfs-server rpcbind
+	# systemctl start nfs-server rpcbind
+	# systemctl status  nfs-server rpcbind
+	
+FTP:
+----
+- file transfer protocol
+port number : 21
+package: ftp vsftpd
+config file: /etc/vsftpd/vsftpd.conf
+service: vsftpd
+
